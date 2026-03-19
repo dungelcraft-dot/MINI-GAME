@@ -1,0 +1,92 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #f2f2f2;
+  background: #111;
+}
+
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100vh;
+}
+
+.left-panel {
+  padding: 1rem;
+  background: #1a1a1d;
+  border-right: 1px solid #2f2f34;
+  overflow: auto;
+}
+
+.left-panel input,
+.left-panel select,
+.left-panel button {
+  width: 100%;
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #0f0f14;
+  color: #fff;
+}
+
+.left-panel button {
+  cursor: pointer;
+  background: linear-gradient(90deg, #7a1fa2, #512da8);
+  border: none;
+}
+
+.game-stage {
+  position: relative;
+  background: #08080a;
+}
+
+.game-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 260px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid #3c3c44;
+  border-radius: 10px;
+  padding: 0.7rem;
+  backdrop-filter: blur(2px);
+}
+
+.bar {
+  height: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background: #333;
+}
+
+.bar > span {
+  display: block;
+  height: 100%;
+}
+
+.hp span { background: #ef5350; }
+.mana span { background: #42a5f5; }
+.stamina span { background: #66bb6a; }
+
+.events {
+  max-height: 150px;
+  overflow: auto;
+  font-size: 0.85rem;
+  color: #ccc;
+}
